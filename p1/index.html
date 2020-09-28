@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title></title>
+    <meta charset='utf-8'>
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js' defer></script>
+    <script src='script.js' defer></script>
+    <style>
+        [v-clock] {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>e28 Project 1</h1>
+
+    <div id='app' v-clock>
+        <lable>What's your name?
+            <input type='text' v-model='playerName'>
+        </lable>
+
+        <p v-if='playerName !=""'>
+            Player: {{ playerName }}
+        </p>
+        <label>Enter your guess:
+            <input type='text' v-model='guess'>
+        </label>
+        <button v-on:click='guesses.push(guess)'>Guess</button>
+
+        <ul>
+            <li v-for='thisGuess in guesses'>{{thisGuess}}</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
