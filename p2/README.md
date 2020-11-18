@@ -1,15 +1,24 @@
-Project 2
-By: Michelle Ha
-Production URL: <http://e28p2.yoh514.me>
+# p2
 
-SFC summary
-List the SFCs of your application
+## Project setup
+```
+npm install
+```
 
-Server interaction
-List the features in your application that are persisting and retrieving data from the server
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-Outside resources
-*n/a*
+### Compiles and minifies for production
+```
+npm run build
+```
 
-Notes for instructor
-*n/a*
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

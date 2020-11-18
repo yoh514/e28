@@ -1,0 +1,191 @@
+/* resource from: http://www.paulirish.com/2012/box-sizing-border-box-ftw */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: #111;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-y: scroll;
+}
+
+body {
+  font-size: 1.6rem;
+  margin-bottom: 60px;
+
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+$radius: 5px;
+
+/* resource from: https: //clrs.cc/ */
+$aqua: #7fdbff;
+$blue: #0074d9;
+$navy: #001f3f;
+$teal: #39cccc;
+$green: #2ecc40;
+$olive: #3d9970;
+$lime: #01ff70;
+
+$yellow: #ffdc00;
+$orange: #ff851b;
+$red: #ff4136;
+$fuchsia: #f012be;
+$purple: #b10dc9;
+$maroon: #85144b;
+
+$white: #ffffff;
+$silver: #dddddd;
+$gray: #aaaaaa;
+$black: #111111;
+
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#logo {
+  width: 318px;
+}
+
+nav ul {
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+
+    a:link,
+    a:visited,
+    a:active,
+    a:hover {
+      text-transform: capitalize;
+      padding: 5px;
+      margin: 5px;
+      cursor: pointer;
+      color: $blue;
+    }
+
+    a:hover {
+      background-color: $blue;
+      color: white;
+      text-decoration: none;
+    }
+
+    a.router-link-active:link,
+    a.router-link-active:visited,
+    a.router-link-active:active,
+    a.router-link-active:hover {
+      text-decoration: none;
+      color: $black;
+      background-color: white;
+      cursor: inherit;
+    }
+  }
+}
+
+#recipes {
+  a.recipe:hover {
+    background-color: lighten($aqua, 10%);
+  }
+
+  a.recipe:link,
+  a.recipe:visited,
+  a.recipe:active,
+  a.recipe:hover {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 1px solid $silver;
+    padding: 20px;
+
+    .recipe-name {
+      font-weight: bold;
+      font-size: 2rem;
+      margin: 5px 0 10px 0;
+    }
+
+    .recipe-thumb {
+      width: 80%;
+      border: 1px solid $black;
+    }
+
+    .recipe-description {
+      width: 75%;
+      margin: auto;
+      text-align: left;
+      font-style: italic;
+    }
+
+    .recipe-price {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+  }
+}
+
+#featured {
+  background-color: lighten($aqua, 10%);
+  border-radius: $radius;
+  padding: 10px;
+}
+
+#recipe-page {
+  img {
+    width: 80%;
+    border: 1px solid $black;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 2rem;
+    width: 75%;
+    margin: 10px auto;
+  }
+
+  .price {
+    font-size: 3rem;
+    margin: 10px auto;
+  }
+
+  button {
+    display: block;
+    margin: 10px auto;
+    font-size: 2rem;
+  }
+}
+
+.cleanList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.alert {
+  background-color: $green;
+  color: white;
+  border-radius: $radius;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
